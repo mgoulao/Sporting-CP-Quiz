@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Sporting CP Quiz</string>
+    <string name="question_one">1. what is the capacity of Alvalade XXI Stadium?</string>
+    <string name="option_one_one">50.076</string>
+    <string name="option_one_two">47.032</string>
+    <string name="option_one_three">74.309</string>
+    <string name="option_one_four">90.056</string>
+
+    <string name="question_two">2. In which city Sporting play their home games?</string>
+    <string name="option_two_one">Beja</string>
+    <string name="option_two_two">Oporto</string>
+    <string name="option_two_three">Lisbon</string>
+    <string name="option_two_four">Faro</string>
+
+    <string name="question_three">3. What is the main colour of Sporting\'s jersey?</string>
+    <string name="option_three_one">Red</string>
+    <string name="option_three_two">Blue</string>
+    <string name="option_three_three">Pink</string>
+    <string name="option_three_four">Green</string>
+
+    <string name="question_four">4. Which Portuguese star was a former Sporting player?</string>
+    <string name="option_four_one">Rui Costa</string>
+    <string name="option_four_two">Figo</string>
+    <string name="option_four_three">Deco</string>
+    <string name="option_four_four">Pauleta</string>
+
+    <string name="question_five">5. Which Cup did Sporting win in 1960s?</string>
+    <string name="option_five_one">Uefa Champions League</string>
+    <string name="option_five_two">European Super Cup</string>
+    <string name="option_five_three">European Cup Winners Cup</string>
+    <string name="option_five_four">UEFA Cup</string>
+
+    <string name="question_six">6. Which player did Sporting sell to Manchester United in 2003?</string>
+    <string name="option_six_one">Hugo Viana</string>
+    <string name="option_six_two">Eusebio</string>
+    <string name="option_six_three">Ricardo Quaresma</string>
+    <string name="option_six_four">Cristiano Ronaldo</string>
+
+    <string name="question_seven">7. Which Sporting athlete won the marathon race at the 1984 Summer Olympics, in Los Angeles?</string>
+    <string name="option_seven_one">Carlos Lopes</string>
+    <string name="option_seven_two">Rosa Mota</string>
+    <string name="option_seven_three">Rui Silva</string>
+    <string name="option_seven_four">Fernando Mamede</string>
+</resources>
