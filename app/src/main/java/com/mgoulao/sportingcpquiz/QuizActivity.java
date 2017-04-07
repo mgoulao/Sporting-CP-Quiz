@@ -4,43 +4,90 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class QuizActivity extends AppCompatActivity {
 
     int numQuestionOneChecked;
     int numQuestionTwoChecked;
     int numQuestionThreeChecked;
-    int numQuestionFourChecked;
+    ArrayList<Integer> numQuestionFourChecked = new ArrayList<>();
     int numQuestionFiveChecked;
     int numQuestionSixChecked;
     int numQuestionSevenChecked;
+    static final String Q_ONE = "question one";
+    static final String Q_TWO = "question two";
+    static final String Q_THREE = "question three";
+    static final String Q_FOUR = "question four";
+    static final String Q_FIVE = "question five";
+    static final String Q_SIX = "question six";
+    static final String Q_SEVEN = "question seven";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
+        for (int i = 0; i < 4; i++) {
+            numQuestionFourChecked.add(0);
+        }
         if(Build.VERSION.SDK_INT <= 19) {
             ScrollView quiz_scroll = (ScrollView) findViewById(R.id.quiz_scroll_view);
             RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) quiz_scroll.getLayoutParams();
-
             layoutParams.topMargin = 285;
             quiz_scroll.setLayoutParams(layoutParams);
             LinearLayout quizHeader = (LinearLayout) findViewById(R.id.quiz_header);
             quizHeader.setBackgroundResource(R.drawable.quiz_header_api_19);
 
         }
+        if (savedInstanceState != null) {
+            // Restore the question values from saved state
+            numQuestionOneChecked = savedInstanceState.getInt(Q_ONE);
+            numQuestionTwoChecked = savedInstanceState.getInt(Q_TWO);
+            numQuestionThreeChecked = savedInstanceState.getInt(Q_THREE);
+            numQuestionFourChecked = savedInstanceState.getIntegerArrayList(Q_FOUR);
+            numQuestionFiveChecked = savedInstanceState.getInt(Q_FIVE);
+            numQuestionSixChecked = savedInstanceState.getInt(Q_SIX);
+            numQuestionSevenChecked = savedInstanceState.getInt(Q_SEVEN);
+        }
+    }
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(Q_ONE, numQuestionOneChecked);
+        savedInstanceState.putInt(Q_TWO, numQuestionTwoChecked);
+        savedInstanceState.putInt(Q_THREE, numQuestionThreeChecked);
+        savedInstanceState.putIntegerArrayList(Q_FOUR, numQuestionFourChecked);
+        savedInstanceState.putInt(Q_FIVE, numQuestionFiveChecked);
+        savedInstanceState.putInt(Q_SIX, numQuestionSixChecked);
+        savedInstanceState.putInt(Q_SEVEN, numQuestionSevenChecked);
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore the question values from saved state
+        numQuestionOneChecked = savedInstanceState.getInt(Q_ONE);
+        numQuestionTwoChecked = savedInstanceState.getInt(Q_TWO);
+        numQuestionThreeChecked = savedInstanceState.getInt(Q_THREE);
+        numQuestionFourChecked = savedInstanceState.getIntegerArrayList(Q_FOUR);
+        numQuestionFiveChecked = savedInstanceState.getInt(Q_FIVE);
+        numQuestionSixChecked = savedInstanceState.getInt(Q_SIX);
+        numQuestionSevenChecked = savedInstanceState.getInt(Q_SEVEN);
+        Log.d("ARRAY", Integer.toString(numQuestionFourChecked.get(1)));
     }
     // The following methods handles the click event for both radio buttons, and store the number of the question selected
     public void firstQuestion(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.button_q_one_1:
@@ -67,7 +114,6 @@ public class QuizActivity extends AppCompatActivity {
     }
     public void secondQuestion(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.button_q_two_1:
@@ -94,7 +140,6 @@ public class QuizActivity extends AppCompatActivity {
     }
     public void thirdQuestion(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.button_q_three_1:
@@ -120,35 +165,46 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
     public void fourthQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
 
-        // Check which radio button was clicked
+        boolean checked = ((CheckBox) view).isChecked();
+        // Check which checkbox was clicked
         switch(view.getId()) {
             case R.id.button_q_four_1:
                 if (checked) {
-                    numQuestionFourChecked = 1;
+                    numQuestionFourChecked.set(0, 1);
+                }
+                else {
+                    numQuestionFourChecked.set(0, 0);
                 }
                 break;
             case R.id.button_q_four_2:
                 if (checked) {
-                    numQuestionFourChecked = 2;
+                    numQuestionFourChecked.set(1, 1);
+                }
+                else {
+                    numQuestionFourChecked.set(1, 0);
                 }
                 break;
             case R.id.button_q_four_3:
                 if (checked) {
-                    numQuestionFourChecked = 3;
+                    numQuestionFourChecked.set(2, 1);
+                }
+                else {
+                    numQuestionFourChecked.set(2, 0);
                 }
                 break;
             case R.id.button_q_four_4:
                 if (checked) {
-                    numQuestionFourChecked = 4;
+                    numQuestionFourChecked.set(3, 1);
+                }
+                else {
+                    numQuestionFourChecked.set(3, 0);
                 }
                 break;
         }
     }
     public void fifthQuestion(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.button_q_five_1:
@@ -175,7 +231,6 @@ public class QuizActivity extends AppCompatActivity {
     }
     public void sixthQuestion(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.button_q_six_1:
@@ -202,7 +257,6 @@ public class QuizActivity extends AppCompatActivity {
     }
     public void seventhQuestion(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.button_q_seven_1:
@@ -239,7 +293,8 @@ public class QuizActivity extends AppCompatActivity {
         if (numQuestionThreeChecked == 4) {
             correctAnswers++;
         }
-        if (numQuestionFourChecked == 2) {
+        if(numQuestionFourChecked.get(0) == 1 && numQuestionFourChecked.get(1) == 1 && numQuestionFourChecked.get(2) == 0
+                && numQuestionFourChecked.get(3) == 0) {
             correctAnswers++;
         }
         if (numQuestionFiveChecked == 3) {

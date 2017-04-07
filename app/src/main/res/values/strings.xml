@@ -18,11 +18,11 @@
     <string name="option_three_three">Pink</string>
     <string name="option_three_four">Green</string>
 
-    <string name="question_four">4. Which Portuguese star was a former Sporting player?</string>
-    <string name="option_four_one">Rui Costa</string>
-    <string name="option_four_two">Figo</string>
-    <string name="option_four_three">Deco</string>
-    <string name="option_four_four">Pauleta</string>
+    <string name="question_four">4. Which of these Sporting athletes won an Olympic medal?</string>
+    <string name="option_four_one">Francis Obikwelu</string>
+    <string name="option_four_two">Rui Silva</string>
+    <string name="option_four_three">Patrícia Mamona</string>
+    <string name="option_four_four">João Pina</string>
 
     <string name="question_five">5. Which Cup did Sporting win in 1960s?</string>
     <string name="option_five_one">Uefa Champions League</string>
