@@ -12,7 +12,6 @@
     <dimen name="fab_margin_top">24dp</dimen>
     <dimen name="radio_button_margin_top">6dp</dimen>
     <dimen name="button_reset_margin_bottom">30dp</dimen>
-
     <dimen name="question_text_size">26sp</dimen>
     <dimen name="options_text_size">24sp</dimen>
 </resources>

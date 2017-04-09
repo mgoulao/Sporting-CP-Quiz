@@ -65,7 +65,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="firstQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_one_2"
                                 android:layout_width="match_parent"
@@ -74,7 +74,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="firstQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_one_3"
                                 android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="firstQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_one_4"
                                 android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="firstQuestion"/>
+                                android:onClick="radioQuestion"/>
                             </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>
@@ -132,7 +132,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="secondQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_two_2"
                                 android:layout_width="match_parent"
@@ -141,7 +141,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="secondQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_two_3"
                                 android:layout_width="match_parent"
@@ -150,7 +150,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="secondQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_two_4"
                                 android:layout_width="match_parent"
@@ -159,7 +159,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="secondQuestion"/>
+                                android:onClick="radioQuestion"/>
                         </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>
@@ -199,7 +199,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="thirdQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_three_2"
                                 android:layout_width="match_parent"
@@ -208,7 +208,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="thirdQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_three_3"
                                 android:layout_width="match_parent"
@@ -217,7 +217,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="thirdQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_three_4"
                                 android:layout_width="match_parent"
@@ -226,7 +226,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="thirdQuestion"/>
+                                android:onClick="radioQuestion"/>
                         </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>
@@ -264,7 +264,7 @@
                             android:textColor="@color/colorPrimaryDark"
                             android:layout_marginTop="@dimen/radio_button_margin_top"
                             android:textSize="@dimen/options_text_size"
-                            android:onClick="fourthQuestion"/>
+                            android:onClick="checkboxQuestion"/>
                         <CheckBox
                             android:id="@+id/button_q_four_2"
                             android:layout_width="match_parent"
@@ -273,7 +273,7 @@
                             android:textColor="@color/colorPrimaryDark"
                             android:layout_marginTop="@dimen/radio_button_margin_top"
                             android:textSize="@dimen/options_text_size"
-                            android:onClick="fourthQuestion"/>
+                            android:onClick="checkboxQuestion"/>
                         <CheckBox
                             android:id="@+id/button_q_four_3"
                             android:layout_width="match_parent"
@@ -282,7 +282,7 @@
                             android:textColor="@color/colorPrimaryDark"
                             android:layout_marginTop="@dimen/radio_button_margin_top"
                             android:textSize="@dimen/options_text_size"
-                            android:onClick="fourthQuestion"/>
+                            android:onClick="checkboxQuestion"/>
                         <CheckBox
                             android:id="@+id/button_q_four_4"
                             android:layout_width="match_parent"
@@ -291,7 +291,7 @@
                             android:textColor="@color/colorPrimaryDark"
                             android:layout_marginTop="@dimen/radio_button_margin_top"
                             android:textSize="@dimen/options_text_size"
-                            android:onClick="fourthQuestion"/>
+                            android:onClick="checkboxQuestion"/>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -330,7 +330,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="fifthQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_five_2"
                                 android:layout_width="match_parent"
@@ -339,7 +339,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="fifthQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_five_3"
                                 android:layout_width="match_parent"
@@ -348,7 +348,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="fifthQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_five_4"
                                 android:layout_width="match_parent"
@@ -357,7 +357,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="fifthQuestion"/>
+                                android:onClick="radioQuestion"/>
                         </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>
@@ -397,7 +397,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="sixthQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_six_2"
                                 android:layout_width="match_parent"
@@ -406,7 +406,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="sixthQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_six_3"
                                 android:layout_width="match_parent"
@@ -415,7 +415,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="sixthQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_six_4"
                                 android:layout_width="match_parent"
@@ -424,7 +424,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="sixthQuestion"/>
+                                android:onClick="radioQuestion"/>
                         </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>
@@ -464,7 +464,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="seventhQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_seven_2"
                                 android:layout_width="match_parent"
@@ -473,7 +473,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="seventhQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_seven_3"
                                 android:layout_width="match_parent"
@@ -482,7 +482,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="seventhQuestion"/>
+                                android:onClick="radioQuestion"/>
                             <RadioButton
                                 android:id="@+id/button_q_seven_4"
                                 android:layout_width="match_parent"
@@ -491,7 +491,7 @@
                                 android:textColor="@color/colorPrimaryDark"
                                 android:layout_marginTop="@dimen/radio_button_margin_top"
                                 android:textSize="@dimen/options_text_size"
-                                android:onClick="seventhQuestion"/>
+                                android:onClick="radioQuestion"/>
                         </RadioGroup>
                     </LinearLayout>
                 </LinearLayout>

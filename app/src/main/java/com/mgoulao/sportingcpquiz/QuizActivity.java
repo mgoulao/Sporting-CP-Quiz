@@ -85,8 +85,8 @@ public class QuizActivity extends AppCompatActivity {
         numQuestionSevenChecked = savedInstanceState.getInt(Q_SEVEN);
         Log.d("ARRAY", Integer.toString(numQuestionFourChecked.get(1)));
     }
-    // The following methods handles the click event for both radio buttons, and store the number of the question selected
-    public void firstQuestion(View view) {
+    // The following method handles the click event for radio buttons, and store the number of the question selected
+    public void radioQuestion(View view) {
         boolean checked = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
         switch(view.getId()) {
@@ -110,12 +110,6 @@ public class QuizActivity extends AppCompatActivity {
                     numQuestionOneChecked = 4;
                 }
                 break;
-        }
-    }
-    public void secondQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
             case R.id.button_q_two_1:
                 if (checked) {
                     numQuestionTwoChecked = 1;
@@ -136,12 +130,6 @@ public class QuizActivity extends AppCompatActivity {
                     numQuestionTwoChecked = 4;
                 }
                 break;
-        }
-    }
-    public void thirdQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
             case R.id.button_q_three_1:
                 if (checked) {
                     numQuestionThreeChecked = 1;
@@ -162,10 +150,70 @@ public class QuizActivity extends AppCompatActivity {
                     numQuestionThreeChecked = 4;
                 }
                 break;
+            case R.id.button_q_five_1:
+                if (checked) {
+                    numQuestionFiveChecked = 1;
+                }
+                break;
+            case R.id.button_q_five_2:
+                if (checked) {
+                    numQuestionFiveChecked = 2;
+                }
+                break;
+            case R.id.button_q_five_3:
+                if (checked) {
+                    numQuestionFiveChecked = 3;
+                }
+                break;
+            case R.id.button_q_five_4:
+                if (checked) {
+                    numQuestionFiveChecked = 4;
+                }
+                break;
+            case R.id.button_q_six_1:
+                if (checked) {
+                    numQuestionSixChecked = 1;
+                }
+                break;
+            case R.id.button_q_six_2:
+                if (checked) {
+                    numQuestionSixChecked = 2;
+                }
+                break;
+            case R.id.button_q_six_3:
+                if (checked) {
+                    numQuestionSixChecked = 3;
+                }
+                break;
+            case R.id.button_q_six_4:
+                if (checked) {
+                    numQuestionSixChecked = 4;
+                }
+                break;
+            case R.id.button_q_seven_1:
+                if (checked) {
+                    numQuestionSevenChecked = 1;
+                }
+                break;
+            case R.id.button_q_seven_2:
+                if (checked) {
+                    numQuestionSevenChecked = 2;
+                }
+                break;
+            case R.id.button_q_seven_3:
+                if (checked) {
+                    numQuestionSevenChecked = 3;
+                }
+                break;
+            case R.id.button_q_seven_4:
+                if (checked) {
+                    numQuestionSevenChecked = 4;
+                }
+                break;
         }
     }
-    public void fourthQuestion(View view) {
-
+    // The following method handles the click event for checkbox, and store in the ArrayList the selected options
+    public void checkboxQuestion(View view) {
         boolean checked = ((CheckBox) view).isChecked();
         // Check which checkbox was clicked
         switch(view.getId()) {
@@ -199,84 +247,6 @@ public class QuizActivity extends AppCompatActivity {
                 }
                 else {
                     numQuestionFourChecked.set(3, 0);
-                }
-                break;
-        }
-    }
-    public void fifthQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.button_q_five_1:
-                if (checked) {
-                    numQuestionFiveChecked = 1;
-                }
-                break;
-            case R.id.button_q_five_2:
-                if (checked) {
-                    numQuestionFiveChecked = 2;
-                }
-                break;
-            case R.id.button_q_five_3:
-                if (checked) {
-                    numQuestionFiveChecked = 3;
-                }
-                break;
-            case R.id.button_q_five_4:
-                if (checked) {
-                    numQuestionFiveChecked = 4;
-                }
-                break;
-        }
-    }
-    public void sixthQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.button_q_six_1:
-                if (checked) {
-                    numQuestionSixChecked = 1;
-                }
-                break;
-            case R.id.button_q_six_2:
-                if (checked) {
-                    numQuestionSixChecked = 2;
-                }
-                break;
-            case R.id.button_q_six_3:
-                if (checked) {
-                    numQuestionSixChecked = 3;
-                }
-                break;
-            case R.id.button_q_six_4:
-                if (checked) {
-                    numQuestionSixChecked = 4;
-                }
-                break;
-        }
-    }
-    public void seventhQuestion(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.button_q_seven_1:
-                if (checked) {
-                    numQuestionSevenChecked = 1;
-                }
-                break;
-            case R.id.button_q_seven_2:
-                if (checked) {
-                    numQuestionSevenChecked = 2;
-                }
-                break;
-            case R.id.button_q_seven_3:
-                if (checked) {
-                    numQuestionSevenChecked = 3;
-                }
-                break;
-            case R.id.button_q_seven_4:
-                if (checked) {
-                    numQuestionSevenChecked = 4;
                 }
                 break;
         }
