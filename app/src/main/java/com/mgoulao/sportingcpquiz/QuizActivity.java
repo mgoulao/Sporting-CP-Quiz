@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
@@ -39,7 +40,7 @@ public class QuizActivity extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             numQuestionFourChecked.add(0);
         }
-        if(Build.VERSION.SDK_INT <= 19) {
+        if (Build.VERSION.SDK_INT <= 19) {
             ScrollView quiz_scroll = (ScrollView) findViewById(R.id.quiz_scroll_view);
             RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) quiz_scroll.getLayoutParams();
             layoutParams.topMargin = 285;
@@ -59,6 +60,7 @@ public class QuizActivity extends AppCompatActivity {
             numQuestionSevenChecked = savedInstanceState.getInt(Q_SEVEN);
         }
     }
+
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         // Save the user's current game state
@@ -72,6 +74,7 @@ public class QuizActivity extends AppCompatActivity {
         // Always call the superclass so it can save the view hierarchy state
         super.onSaveInstanceState(savedInstanceState);
     }
+
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         // Always call the superclass so it can restore the view hierarchy
         super.onRestoreInstanceState(savedInstanceState);
@@ -83,23 +86,24 @@ public class QuizActivity extends AppCompatActivity {
         numQuestionFiveChecked = savedInstanceState.getInt(Q_FIVE);
         numQuestionSixChecked = savedInstanceState.getInt(Q_SIX);
         numQuestionSevenChecked = savedInstanceState.getInt(Q_SEVEN);
-        Log.d("ARRAY", Integer.toString(numQuestionFourChecked.get(1)));
+
     }
+
     // The following method handles the click event for radio buttons, and store the number of the question selected
     public void radioQuestion(View view) {
         boolean checked = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.button_q_one_1:
                 if (checked) {
                     numQuestionOneChecked = 1;
                 }
-                    break;
+                break;
             case R.id.button_q_one_2:
                 if (checked) {
                     numQuestionOneChecked = 2;
                 }
-                    break;
+                break;
             case R.id.button_q_one_3:
                 if (checked) {
                     numQuestionOneChecked = 3;
@@ -212,45 +216,43 @@ public class QuizActivity extends AppCompatActivity {
                 break;
         }
     }
+
     // The following method handles the click event for checkbox, and store in the ArrayList the selected options
     public void checkboxQuestion(View view) {
         boolean checked = ((CheckBox) view).isChecked();
         // Check which checkbox was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.button_q_four_1:
                 if (checked) {
                     numQuestionFourChecked.set(0, 1);
-                }
-                else {
+                } else {
                     numQuestionFourChecked.set(0, 0);
                 }
                 break;
             case R.id.button_q_four_2:
                 if (checked) {
                     numQuestionFourChecked.set(1, 1);
-                }
-                else {
+                } else {
                     numQuestionFourChecked.set(1, 0);
                 }
                 break;
             case R.id.button_q_four_3:
                 if (checked) {
                     numQuestionFourChecked.set(2, 1);
-                }
-                else {
+                } else {
                     numQuestionFourChecked.set(2, 0);
                 }
                 break;
             case R.id.button_q_four_4:
                 if (checked) {
                     numQuestionFourChecked.set(3, 1);
-                }
-                else {
+                } else {
                     numQuestionFourChecked.set(3, 0);
                 }
                 break;
         }
     }
+
     // Calculates the score and shows a Toast
     public void score(View view) {
         double correctAnswers = 0;
@@ -263,7 +265,7 @@ public class QuizActivity extends AppCompatActivity {
         if (numQuestionThreeChecked == 4) {
             correctAnswers++;
         }
-        if(numQuestionFourChecked.get(0) == 1 && numQuestionFourChecked.get(1) == 1 && numQuestionFourChecked.get(2) == 0
+        if (numQuestionFourChecked.get(0) == 1 && numQuestionFourChecked.get(1) == 1 && numQuestionFourChecked.get(2) == 0
                 && numQuestionFourChecked.get(3) == 0) {
             correctAnswers++;
         }
@@ -276,8 +278,16 @@ public class QuizActivity extends AppCompatActivity {
         if (numQuestionSevenChecked == 1) {
             correctAnswers++;
         }
+        EditText answerEight = (EditText) findViewById(R.id.answer_eight);
+        String strAnswerEight = answerEight.getText().toString();
+        Log.d("Resposta 8", strAnswerEight.toUpperCase().replaceAll("\\s+", ""));
+        if (strAnswerEight.toUpperCase().replaceAll("\\s+", "").equals("SPORTINGCLUBEDEPORTUGAL")) {
+            correctAnswers++;
+            Log.d("Resposta 8", "Checked");
+
+        }
         // Calculate percentage using double and transform it to an integer
-        double scorePerc = correctAnswers / 7 * 100;
+        double scorePerc = correctAnswers / 8 * 100;
         int intScorePerc = (int) Math.round(scorePerc);
         String scorePerText = Integer.toString(intScorePerc);
         // Create a toast with the final score

@@ -41,4 +41,7 @@
     <string name="option_seven_two">Rosa Mota</string>
     <string name="option_seven_three">Rui Silva</string>
     <string name="option_seven_four">Fernando Mamede</string>
+
+    <string name="question_eight">8. What is Sporting official name?</string>
+    <string name="answer">Answer</string>
 </resources>
